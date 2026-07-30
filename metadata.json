@@ -1,0 +1,6 @@
+{
+  "name": "RemoveSynthID - AI Watermark & AI Detection Remover",
+  "description": "Upload AI-generated images to strip SynthID watermarks, clean AI metadata, inject natural sensor grain, and humanize photos to pass AI detectors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

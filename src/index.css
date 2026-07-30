@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  
+  .glass-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.3), rgba(59, 130, 246, 0.5));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(1px);
+  }
+}
+
+/* Dark mode custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom range slider styling for dark studio theme */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+  border: 2px solid #ffffff;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #818cf8;
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.9);
+}
+
